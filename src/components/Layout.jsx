@@ -26,9 +26,21 @@ const Layout = ({ children }) => {
         // Handle anchor links
         const handleAnchorClick = (e) => {
             const target = e.target.closest('a');
-            if (target && target.hash && target.hash.startsWith('#') && target.origin === window.location.origin) {
+            if (!target || target.origin !== window.location.origin) return;
+
+            const href = target.getAttribute('href');
+
+            // Handle "Back to Top" (Logo)
+            if (href === '#') {
                 e.preventDefault();
-                const element = document.querySelector(target.hash);
+                lenis.scrollTo(0, { duration: 1.5 });
+                return;
+            }
+
+            // Handle Section Links
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
+                const element = document.querySelector(href);
                 if (element) {
                     lenis.scrollTo(element, { offset: -80 }); // Adjust offset for fixed header
                 }
@@ -41,6 +53,7 @@ const Layout = ({ children }) => {
             lenis.destroy();
             document.removeEventListener('click', handleAnchorClick);
         };
+
     }, []);
 
     return (
