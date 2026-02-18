@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "title": "Neon Branding",
+        "slug": "neon-branding",
+        "category": "Branding",
+        "coverImage": "https://placehold.co/600x400/000000/FFF?text=Neon+Branding",
+        "description": "A bold identity for a nightlife startup."
+    },
+    {
+        "id": 2,
+        "title": "Tech Summit 2025",
+        "slug": "tech-summit",
+        "category": "Event Design",
+        "coverImage": "https://placehold.co/600x400/FFA500/000?text=Tech+Summit",
+        "description": "Visual identity for a major tech conference."
+    },
+    {
+        "id": 3,
+        "title": "Eco Flow",
+        "slug": "eco-flow",
+        "category": "Web Design",
+        "coverImage": "https://placehold.co/600x400/FFD700/000?text=Eco+Flow",
+        "description": "Sustainable energy website design."
+    }
+]

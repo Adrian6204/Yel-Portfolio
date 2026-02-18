@@ -1,3 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+    --font-sans: 'Open Sans', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --color-accent-yellow: #FFD700;
+    --color-accent-orange: #FFA500;
+    --color-primary-black: #000000;
+    --color-primary-white: #FFFFFF;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--color-primary-black);
+    color: var(--color-primary-white);
+}
